@@ -40,9 +40,8 @@
         foreach($serieA as $squadra => $risultati){
             echo "<h2>".$squadra ." : ". $stampoRis[0]. " : " . $risultati[0] ." " . $stampoRis[1]. " : " . $risultati[1] ." ". $stampoRis[2]. " : " . $risultati[2] ." ". $stampoRis[3]. " : " . $risultati[3]."</h2><br>";
         }
-        $vittore = array_column($serieA, 0);
-        array_multisort($vittore, SORT_DESC, $serieA);
-        echo "<h1>----------------------Ordinato per Vittorie----------------------</h1>";
+        asort($serieA);
+        echo "<h1>----------------------Ordinato per Punti Inverso----------------------</h1>";
         foreach($serieA as $squadra => $risultati){
             echo "<h2>".$squadra ." : ". $stampoRis[0]. " : " . $risultati[0] ." " . $stampoRis[1]. " : " . $risultati[1] ." ". $stampoRis[2]. " : " . $risultati[2] ." ". $stampoRis[3]. " : " . $risultati[3]."</h2><br>";
         }
